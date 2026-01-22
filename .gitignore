@@ -161,3 +161,29 @@ cython_debug/
 
 .ruff_cache/
 *.zip
+
+# ===== 数据与模型文件（核心，必须忽略） =====
+data/                  # 忽略整个数据目录
+*.zip                  # 忽略所有zip压缩包（包括你生成的提交包）
+*.tar.gz
+*.pth
+*.pt
+*.bin
+*.h5
+*.npz
+
+# ===== 运行环境与生成文件 =====
+.venv/                 # Python虚拟环境（uv sync创建的）
+__pycache__/          # Python字节码缓存
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/   # Jupyter笔记本缓存
+
+# ===== 系统文件 =====
+.DS_Store             # macOS桌面服务存储
+Thumbs.db             # Windows缩略图缓存
+*.swp                 # Vim交换文件
+
+# ===== 个人IDE/编辑器配置 =====
+.vscode/              # VSCode项目配置（如果你不想共享）
+.idea/                # PyCharm配置
