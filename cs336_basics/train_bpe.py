@@ -108,7 +108,7 @@ def train_bpe(
         words_list.append(list(word_tuple)) # 转换为 list 以便后面修改
         counts_list.append(freq)
 
-    # defaultdict(int) 是一个“带默认初始值”的字典。当你访问一个字典中不存在的键时，它不会报错，而是自动为这个键创建一个默认值 0，而在使用普通字典进行计数时，你必须先检查键是否存在，否则会触发 KeyError。
+    # defaultdict(int) 是一默认初个“带始值”的字典。当你访问一个字典中不存在的键时，它不会报错，而是自动为这个键创建一个默认值 0，而在使用普通字典进行计数时，你必须先检查键是否存在，否则会触发 KeyError。
     # stats: 存储所有可能的相邻字节对 (pair) 及其全局出现频率。
     # 结构：{(byte_a, byte_b): frequency}
     stats = defaultdict(int)
@@ -280,14 +280,14 @@ def save_tokenizer_files(vocab, merges, out_dir):
             f.write(f"{s1} {s2}\n")
 
 def main():
-    input_path = "data/TinyStoriesV2-GPT4-train.txt" # 你的原始文本路径
+    input_path = "../data/TinyStoriesV2-GPT4-train.txt" # 你的原始文本路径
     vocab_size = 10000 # 作业要求的词表大小
     # input_path = "data/owt_train.txt" 
     # input_path = "data/chinese.txt" 
     # vocab_size = 1000 # 作业要求的词表大小
     
     special_tokens = ["<|endoftext|>"]
-    output_dir = "data/TinyStoriesV2-GPT4-train"
+    output_dir = "../data/TinyStoriesV2-GPT4-train"
 
     print(f"开始训练 BPE 分词器 (目标词表大小: {vocab_size})...")
     print("这可能需要几分钟，具体取决于你的 CPU 速度和倒排索引的效率。")
