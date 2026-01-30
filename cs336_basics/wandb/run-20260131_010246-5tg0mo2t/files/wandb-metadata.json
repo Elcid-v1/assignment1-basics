@@ -1,0 +1,57 @@
+{
+  "os": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "python": "CPython 3.12.9",
+  "startedAt": "2026-01-30T17:02:46.461666Z",
+  "args": [
+    "--train_data_path",
+    "data/tiny_train.txt",
+    "--valid_data_path",
+    "data/tiny_valid.txt",
+    "--max_iters",
+    "5",
+    "--batch_size",
+    "8",
+    "--context_length",
+    "64",
+    "--d_model",
+    "128",
+    "--num_layers",
+    "2",
+    "--run_name",
+    "smoke_test"
+  ],
+  "program": "/home/wcy/cs336_course/assignment1-basics/cs336_basics/main_train.py",
+  "codePath": "cs336_basics/main_train.py",
+  "codePathLocal": "main_train.py",
+  "git": {
+    "remote": "git@github.com:Elcid-v1/assignment1-basics.git",
+    "commit": "036968efc5195d73fb3ad1be83d488634f6a95d9"
+  },
+  "email": "2398748524@qq.com",
+  "root": "/home/wcy/cs336_course/assignment1-basics/cs336_basics",
+  "host": "LAPTOP-O4KC17HP",
+  "executable": "/home/wcy/cs336_course/assignment1-basics/.venv/bin/python3",
+  "cpu_count": 8,
+  "cpu_count_logical": 16,
+  "gpu": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "1081101176832",
+      "used": "53976477696"
+    }
+  },
+  "memory": {
+    "total": "7199719424"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+      "memoryTotal": "4294967296",
+      "architecture": "Ampere",
+      "uuid": "GPU-6737e668-9489-ac07-be0a-81cfafe290f6"
+    }
+  ],
+  "cudaVersion": "12.0",
+  "writerId": "zltpjd1m7zz0ib4a79jcko7nf998h623"
+}

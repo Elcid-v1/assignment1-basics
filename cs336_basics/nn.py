@@ -246,8 +246,8 @@ class CausalSelfAttention(nn.Module):
     def forward(self, x: torch.Tensor, token_positions: torch.Tensor = None) -> torch.Tensor:
         b, s, d = x.shape
         
-        # 步骤 1 & 2: 投影与拆分头 (保持不变)
-        # q = self.q_proj(x).view(b, s, self.num_heads, self.d_k).transpose(1, 2)
+        # 步骤 1 & 2: 投影与拆分头 (保持不变)    用rearrange代替上面这个    将d拆成h、dk，并交换h和s顺序
+        # q = self.q_proj(x).view(b, s, self.num_heads, self.d_k).transpose(1, 2)   
         # k = self.k_proj(x).view(b, s, self.num_heads, self.d_k).transpose(1, 2)
         # v = self.v_proj(x).view(b, s, self.num_heads, self.d_k).transpose(1, 2)
         q = rearrange(self.q_proj(x), '... s (h d) -> ... h s d', h=self.num_heads)
